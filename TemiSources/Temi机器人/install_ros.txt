@@ -1,0 +1,122 @@
+start to set ROBOX from a clear ubuntu
+
+note: plz do not download and install anaconda.
+
+             plz never use $sudo apt-get autoremove or $sudo apt-get -f install.
+
+             be careful to all operations based on sudo or root.
+
+warning:distcc may not work after finishing all environmental packages installation.
+
+                     use code 'ask Feng Wang or Anders for help' to solve this problem.
+
+                     or use code 'rk_catkin_build_zmq_self' to compile based on your local g++ compiler.
+
+error:the code in robox(ROS) have some grammar mistakes, ignore that.
+
+1.install ubuntu version=16.04 english
+
+  exchange to share -- install ubuntu 16.04 and nvidia
+
+
+2.install teamviewer version=14
+
+  download the 64bit deb file from https://www.teamviewer.com/en-us/download/linux/
+
+  $cd /Downloads;
+
+  $sudo dpkg -i <filename>;
+
+
+3.link to Gitlab
+
+  exchange to share -- trl pwd verify
+
+
+4.install Git
+
+  $sudo apt-get install git;
+
+
+5.install ROS
+
+  install from http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+  (note:very very very slowly ';' change the source from cn to hongkong or aliyun)
+
+
+6.install Robox dependencies
+
+  audio related library:
+
+    $sudo apt install -y libatlas-base-dev;
+
+  dlib related library:
+
+    $sudo apt-get install libopenblas-dev;
+
+  install teamy's ros dependencies:
+
+    $sudo apt-get install ros-kinetic-joy;
+
+    $sudo apt-get install android-tools-adb android-tools-adb;
+
+    $sudo apt-get install g++-aarch64-linux-gnu;
+
+
+7.install Robox environment
+
+  $git clone git@172.16.1.91:robox_china/X3399.git;
+
+  $git clone git@172.16.1.91:robox/robox.git;
+
+  $~/X3399/scripts/sysroot-relativelinks.py /home/$USER/X3399/sysroot;
+
+  $~/X3399/scripts/fix_cmakes_for_cross.py;
+
+  $sudo rm -rf /usr/include/eigen3;
+
+  $sudo cp -r ~/X3399/sysroot/usr/include/eigen3 /usr/include/;
+
+
+8.install google cartographer
+
+  $sudo apt-get update;
+
+  $sudo apt-get install python-catkin-tools;
+
+  $sudo apt-get install -y python-wstool python-rosdep ninja-build;
+
+  $mkdir ~/catkin_ws_carto;
+
+  $cd ~/catkin_ws_carto;
+
+  $wstool init src;
+
+  $wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall;
+
+  change net to temi-china-ss
+
+  $wstool update -t src;
+
+  $src/cartographer/scripts/install_proto3.sh;
+
+  $sudo rosdep init;
+
+  $rosdep update;
+
+  $rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y;
+
+
+9.install distcc
+
+  $cd ~/X3399/distributed_compile;
+
+  $sudo bash ./set_distributed_server;
+
+
+10.set PATH to compile
+
+  $export PATH=$PATH:~/X3399/bin;
+
+  $export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib;

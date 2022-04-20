@@ -1,0 +1,105 @@
+Overlap 
+
+    Version Release Cycle 
+
+    R&D phase 
+
+	    Code review 
+
+	    Functionality test 
+
+	    Deliver test report fast 
+
+    Staging phase 
+
+	    System test 
+
+	    Raise and record all new bugs spotted. Blocker bugs need to be delivered to R&D team immediately 
+
+	    Hotfix test 
+
+	    Final test report 
+
+    Production phase 
+
+	    Sanity test 
+
+	    Formal version release confirmation to Tech Support Team. Tech Support Team will handle the version release. 
+
+	    Reproduce and solve bugs which are found by customers. 
+
+    Report Convention 
+
+	    Directory structure 
+
+	    Readme format 
+
+	    Slack format 
+
+	    Jira format 
+
+	    Final staging report format 
+
+	    Code review goes to github 
+
+	    Logs+bags goes to Jira 
+
+	    Informative notification goes to slack 
+
+    Testrail 
+
+	    Categorize test cases in terms of ROS node. 
+
+	    Add new test cases before staging phase starts. 
+
+	    Every test case needs step-by-step description. 
+
+    OTA 
+
+	    Create payload 
+
+	    Upload payload 
+
+	    Query payload 
+
+	    Download payload (bash script) 
+
+    Production server 
+
+	    Import Flex data 
+
+	    Query information 
+
+    BI 
+
+    	    Download data 
+
+    Access 
+
+	    Github 
+
+	    Testrail 
+
+	    Jira 
+
+	    App center 
+
+	    Google Drive 
+
+	    Sharepoint 
+
+	    OpenVPN 
+
+	    OTA dashboard (8080, 9090) 
+
+	    BI 
+
+	    Teambition 
+
+	    Production server 
+
+    R&D 
+
+	    R&D development 
+
+	    Bug fix 
