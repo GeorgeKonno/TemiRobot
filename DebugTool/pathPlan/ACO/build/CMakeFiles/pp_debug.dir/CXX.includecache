@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gliu/Desktop/ACO/ACSRoutePlan_OneACS.cpp
+iostream
+-
+cmath
+-
+time.h
+-
+vector
+-
+fstream
+-
+
