@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/gliu/Desktop/Docking_detection_temi/devel -DCMAKE_INSTALL_PREFIX=/home/gliu/Desktop/Docking_detection_temi/install -G Unix Makefiles

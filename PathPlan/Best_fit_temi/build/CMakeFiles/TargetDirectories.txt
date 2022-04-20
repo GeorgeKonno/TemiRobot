@@ -1,0 +1,3 @@
+/home/gliu/Desktop/Best_fit_temi/build/CMakeFiles/rebuild_cache.dir
+/home/gliu/Desktop/Best_fit_temi/build/CMakeFiles/edit_cache.dir
+/home/gliu/Desktop/Best_fit_temi/build/CMakeFiles/best_fit.dir
